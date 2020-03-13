@@ -1,9 +1,23 @@
+import pandas as pd
+
 import numpy as np
-d = np.array(
-    [
-        [1,2,3,4],
-        [2,3,4,0],
-        [1,2,3,1],
-    ]
+
+# a= np.array([1,2])
+# b= np.array([[3,4]])
+# # c = np.hstack((a,b))
+# a = a[None]
+# print(a)
+
+a  = pd.DataFrame(
+    [[1,2,3],
+    [4,5,6],
+    [7,8,9]]
 )
-print(d[np.where(d[:,-1]==0)])
+b  = pd.DataFrame(
+    [[1,2,3],
+    [4,5,6],
+    [7,8,9]]
+)
+c = pd.concat([a,b])
+print(c)
+print(a['2'].shape)
